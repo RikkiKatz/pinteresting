@@ -9,7 +9,9 @@
 	</div>
 
 	<div class = "panel-footer">
-	<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-small" %> |
-	<%= link_to 'Back', pins_path, class: "btn btn-default btn-small" %>
+		<% if @pin.user == current_user %>
+			<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary btn-small" %> |
+		<% end %>
+		<%= link_to 'Back', pins_path, class: "btn btn-default btn-small" %>
 	</div>
 </div>
