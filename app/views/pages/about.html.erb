@@ -1,13 +1,24 @@
-<div class="jumbotron center">
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h2>About My Project</h2>	
+	</div>
 
-	<div class= "container"><font size = "8">
-		<p>This is a sample pinterest application</p>
-		<p>where users can add pins to share with friends!</p>
-	</font size></div>
-	<br>
+	<div class="panel-body"><font size = "4">
+		<div class = "form-group">
+			<p>This is a sample pinterest application where users can add pins to share with friends!</p>
+		</div><br>
 
-	<div class = "container"><font size ="6">
-			<p>Click <%= link_to "here", 'http://eepurl.com/ShH59' %> to sign up for the mailing list</p>
+		<div class = "form-group">
+			<p>Register for the <%= link_to 'http://eepurl.com/ShH59' do %>
+            mailing list <span class="glyphicon glyphicon-envelope"></span>
+      	<% end %> to receive updates!</p>
+      </div>
+
 	</font size></div>
+
+	<div class = "panel-footer">
+	   <p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-md" %></p>
+		<p><%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-md" %></p>
+  	</div>
 
 </div>
